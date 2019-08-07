@@ -9,8 +9,6 @@ const app        = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-// app.set("view engine", "ejs");
-
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/signup.html");
 });
@@ -66,7 +64,3 @@ let port = 3000 || process.env.PORT;
 app.listen(port, () => {
   console.log('Server is up and running');
 });
-
-// 9b170abbdc55f37b3d27363013aaa882-us3  API Key
-
-// 7f4145bd5a  audience
