@@ -33,11 +33,13 @@ app.post("/", (req, res) => {
 
   let jsonData = JSON.stringify(data);
 
+  const MAILCHIMP_API = process.env.MAILCHIMP_API;
+
   let options = {
     url: "https://us3.api.mailchimp.com/3.0/lists/7f4145bd5a",
     method: "POST",
     headers: {
-      "Authorization": "ben 9b170abbdc55f37b3d27363013aaa882-us3"
+      "Authorization": "ben " + MAILCHIMP_API
     },
     body: jsonData
   };
